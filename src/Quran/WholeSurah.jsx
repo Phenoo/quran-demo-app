@@ -73,6 +73,12 @@ span{
   }
 }
 
+@media(max-width: 30em){
+  p{
+    font-size: 0.75rem;
+  }
+}
+
 `
 
 const WholeSurah = () => {
