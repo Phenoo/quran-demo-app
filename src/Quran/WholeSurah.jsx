@@ -16,9 +16,17 @@ h2{
   font-size: 2.25rem;
   margin-bottom: 1.5rem;
 
+  @media(max-width: 30em){
+    font-size: 1.5rem;
+  }
+
   span{
     font-size: 0.9rem;
     margin-left: 1rem;
+
+    @media(max-width: 30em){
+      font-size: 0.7rem;
+    }
   }
 }
 h4{
@@ -26,7 +34,7 @@ h4{
   text-align: center;
 
   @media(max-width: 30em){
-    font-size: 1.35rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -48,6 +56,8 @@ h6{
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
+
+
 `
 
 const AyahContainer = styled.div`
@@ -96,6 +106,9 @@ const WholeSurah = () => {
 
 
   const {number} = useParams()
+
+  const num = parseInt(number)
+  const numb = (num + 1)
   useEffect(() => {
     const fetchAyah = async () => {
       const ayahData = await fetchData(`https://api.alquran.cloud/v1/surah/${number}-/en.asad`);
@@ -160,11 +173,24 @@ const WholeSurah = () => {
           } 
         
       </AyahContainer>
-      <Link to='/'>
-        <MoreBtn>
-          Back
-        </MoreBtn>
-      </Link>
+      <div className="more">
+        <div>
+          <Link to='/'>
+            <MoreBtn>
+              Back
+            </MoreBtn>
+          </Link>
+        </div>
+        <div>
+          <Link to={`/wholesurah/${numb}`}>
+            <PrimaryBtn>
+              next
+            </PrimaryBtn>
+          </Link>
+        </div>
+
+      </div>
+
     </Container>
   )
 }

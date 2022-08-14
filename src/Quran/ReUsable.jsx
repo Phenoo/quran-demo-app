@@ -382,6 +382,12 @@ margin: 2rem auto;
   }
 }
 
+.more{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 `
 
 export const GreenContainer = styled.div`
