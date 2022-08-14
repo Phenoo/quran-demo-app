@@ -24,11 +24,18 @@ h2{
 h4{
   font-size: 1.75rem;
   text-align: center;
+
+  @media(max-width: 30em){
+    font-size: 1.35rem;
+  }
 }
 
 h6{
   font-size: 1.1rem;
   font-weight: 400;
+  @media(max-width: 30em){
+    font-size: 0.8rem;
+  }
 }
 .btn-con{
   display: flex;
