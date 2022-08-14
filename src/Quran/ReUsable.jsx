@@ -50,11 +50,17 @@ margin: 2rem auto;
 
   @media(max-width: 64em){
     width: 100%;
-  h4{
-    font-size: 1.5rem;
-  }
+    h4{
+      font-size: 1.5rem;
+    }
     p{
     font-size: 0.8rem;
+    }
+  }
+
+  @media(max-width: 64em){
+    p{
+      font-size: 0.7rem;
     }
   }
 }
@@ -127,6 +133,13 @@ margin: 2rem auto;
       line-height: 1.2rem;
     }
   }
+
+  @media(max-width: 30em){
+    p{
+      font-size: 0.5rem;
+      line-height: 1rem;
+    }
+  }
 }
 
 .translation{
@@ -151,6 +164,10 @@ margin: 2rem auto;
 
       @media(max-width: 50em){
         font-size: 0.8rem;
+      }
+      
+      @media(max-width: 31em){
+        font-size: 0.7rem;
       }
       
     }
@@ -251,9 +268,17 @@ margin: 2rem auto;
   flex-direction: column;
   gap: 1rem;
 
+  @media(max-width: 31em){
+    gap: 0.75rem;
+  }
+
   p{
     font-size: 0.8rem;
     text-align: center;
+
+    @media(max-width: 31em){
+      font-size: 0.6rem;
+    }
   }
 
   .blog-container{
@@ -282,10 +307,13 @@ margin: 2rem auto;
 
       h6{
         font-size: 0.9rem;
+        font-weight: 550;
       }
 
       p{
         text-align: left;
+        margin-top: 0.5rem;
+        font-size: 0.7rem;
       }
       img{
         width: 150px;
@@ -370,6 +398,10 @@ h4{
 p{
   color: #fff;
   font-size: 0.7rem;
+
+  @media(max-width: 30em){
+    font-size: 0.5rem;
+  }
 }
 .image-container{
   display: flex;
@@ -377,8 +409,13 @@ p{
   overflow: hidden;
   img{
     width: 12rem;
-    height: 18rem;
+    height: 16rem;
     object-fit: cover;
+  
+    @media(max-width: 30em){
+      height: 15rem;
+    }
+
   }
 }
 
@@ -387,6 +424,10 @@ p{
   p{
     margin: 1rem 0;
     width: 80%;
+
+  @media(max-width: 30em){
+    width: 90%;
+  }
   }
   .pagination-btns{
     display: flex;
@@ -439,11 +480,19 @@ p{
   width: 100%;
   padding: 2rem 0;
 
+  h4{
+    @media(max-width: 35em){
+      font-size: 1.25rem;
+  }
+
   p{
     width: 50%;
     @media(max-width: 50em){
       font-size: 0.7rem;
       width: 90%;
+    }
+    @media(max-width: 31em){
+      font-size: 0.5rem;
     }
   }
 
@@ -458,7 +507,7 @@ p{
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 2px 10px;
+      padding: 0.2rem 0.6rem;
       text-transform: capitalize;
       color: #000;
       background-color: #fff;
@@ -467,6 +516,10 @@ p{
       text-align: left;
       svg {
           font-size: 1.4rem;
+
+          @media(max-width: 30em){
+            font-size: 1rem;
+          }
       }
       .play {
           svg {
@@ -474,13 +527,21 @@ p{
           }
       }
       h6{
-        font-size: 12px;
+        font-size: 0.8rem;
+
+        @media(max-width: 30em){
+          font-size: 0.6rem;
+        }
       }
       p {
           font-weight: 500;
           color: #000;
           width: 100%;
-          font-size: 10px;
+          font-size: 0.6rem;
+
+          @media(max-width: 30em){
+            font-size: 0.45rem;
+          }
       }
   }
 }
@@ -514,13 +575,19 @@ p{
 }
 
 @media(max-width: 50em){
+  flex-direction: column;
   h2{
     font-size: 1.25rem;
   }
 }
 
-@media(max-width: 50em){
-  flex-direction: column;
+@media(max-width: 31em){
+  h2{
+    font-size: 1rem;
+  }
+  p{
+    font-size: 0.6rem;
+  }
 }
 
 `
@@ -592,7 +659,7 @@ margin: 2rem auto;
     a{
       text-transform: capitalize;
       color: ${color};
-      font-size: 14px;
+      font-size: 0.8rem;
       transition: 0.3s ease;
       font-weight: 400;
 
@@ -603,7 +670,7 @@ margin: 2rem auto;
       }
     }
     p{
-      font-size: 14px;
+      font-size: 0.8rem;
       color: ${color};
     }
 
@@ -629,7 +696,7 @@ margin: 2rem auto;
           display: flex;
           align-items: center;
           background-color: rgba(0, 0, 0, 0.2);
-          padding: 10px;
+          padding: 0.6rem;
           border-radius: 50%;
           transition: 0.3s ease;
           &:hover{
@@ -639,6 +706,14 @@ margin: 2rem auto;
 
           svg{
             font-size: 1.25rem;
+          }
+
+          @media(max-width: 31.5em){
+            padding: 0.4rem;
+
+            svg{
+              font-size: 1.1rem;
+            }
           }
         }
       }

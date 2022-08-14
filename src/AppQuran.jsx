@@ -7,7 +7,7 @@ import Translation from './Quran/section/Translation'
 import Preachers from './Quran/section/Preachers'
 import Blog from './Quran/section/Blog'
 import Footer from './Quran/section/Footer'
-import Subscribe from './Quran/section/Subscribe'
+import Download from './Quran/section/Download'
 import { GlobalStyles } from './styles/GlobalStyles'
 import Stats from './Quran/Stats'
 import WholeSurah from './Quran/WholeSurah'
@@ -40,7 +40,7 @@ const AppQuran = () => {
       <Translation />
       <Preachers />
       <Blog />
-      <Subscribe />
+      <Download />
       <Footer />
       <ScrollUp />
     </>

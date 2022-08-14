@@ -20,7 +20,6 @@ h1, h2, h3, h4, h5, p{
 }
 
 a{
-  // mix-blend-mode: difference;
   text-transform: uppercase;
   outline: none;
   text-decoration: none;
@@ -40,7 +39,7 @@ button{
 
   @media(max-width: 35em){
     padding: 0.3rem  0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   &:hover{

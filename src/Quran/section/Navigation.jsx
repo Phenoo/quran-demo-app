@@ -7,6 +7,7 @@ width: 85%;
 margin: 0 auto;
 display: flex;
 justify-content: space-between;
+align-items: center;
 padding: 10px;
 border-bottom: 2px solid #2a453e;
 position: relative;
@@ -70,15 +71,19 @@ const MenuItem = styled.li`
     color: orange;
   }
 }
+
+@media(max-width: 31em){
+  font-size: 1.25rem;
+}
 `
 
 const MenuBtn = styled.span`
 width: 1.5rem;
 height: 2px;
-background: #fff;
+background:${props => props.click ? ' #fff' : '#2a453e'};
 
 position: absolute;
-top: 2rem;
+top: 1.25rem;
 right: 0;
 transform: ${props => props.click ? 'translateX(-50%) rotate(90deg)' : 'translateX(-50%) rotate(0)'} ;
 
@@ -95,7 +100,7 @@ z-index: 100;
   width:${props => props.click ? '1rem' : '1.5rem'};
   height: 2px;
   right: ${props => props.click ? '-2px' : '0'};
-  background: #fff;
+  background:${props => props.click ? ' #fff' : '#2a453e'};
   position: absolute;
   transition: all 0.3s ease;
 }
@@ -136,6 +141,7 @@ const Navigation = () => {
       block: 'start',
       inline: 'nearest'
     })
+    setClick(!click);
   }
   return (
     <Nav id='nav'>

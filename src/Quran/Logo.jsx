@@ -13,6 +13,10 @@ const LogoComponent = styled(Link)`
 
   h6{
     font-size: 1.3rem;
+
+    @media(max-width: 31em){
+      font-size: 1rem;
+    }
   }
 
   &:hover{

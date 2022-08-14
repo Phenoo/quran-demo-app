@@ -25,7 +25,7 @@ const Translation = () => {
         console.log('meta')
         }
         else{
-        setData(mata.filter((item) => item.number < 31));
+        setData(mata.filter((item) => item.number < 16));
         }
 
     }    

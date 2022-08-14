@@ -2,7 +2,7 @@ import React from 'react'
 import { GreenContainer, Semi } from '../ReUsable'
 import {SiApple, SiGoogleplay} from 'react-icons/si'
 
-const Subscribe = () => {
+const Download = () => {
   return (
     <GreenContainer id='subscribe'>
       <section className="subscribe">
@@ -32,10 +32,9 @@ const Subscribe = () => {
             </div>
           </a>
         </div>
-        npm i styled-components @react-icons
       </section>
     </GreenContainer>
   )
 }
 
-export default Subscribe
+export default Download
