@@ -57,10 +57,10 @@ const Translation = () => {
         </div>
         <div className="translate-container">
         {
-          data.map((item) => {
+          data.map((item, index) => {
             const { number, englishName, englishNameTranslation, numberOfAyahs, name} = item;
             return (
-              <Link to={`/wholesurah/${number}`} key={number} className='card'>
+              <Link to={`/wholesurah/${number}`} key={index} className='card'>
                 <div className="number">
                   <h5>
                     {number}

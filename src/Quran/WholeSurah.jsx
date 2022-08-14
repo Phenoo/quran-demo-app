@@ -107,21 +107,32 @@ const WholeSurah = () => {
 
   const {number} = useParams()
 
-  const num = parseInt(number)
-  const numb = (num + 1)
+  const num = parseInt(number);
+  const numb = (num + 1);
+  const CheckNumber = () => {
+    if (numb > 112) {
+      alert('Invalid Chapter number, Back to Chapter 1')
+      return 1;
+    }
+  }
+
+  const finnum = CheckNumber(numb);
+
+
   useEffect(() => {
     const fetchAyah = async () => {
-      const ayahData = await fetchData(`https://api.alquran.cloud/v1/surah/${number}-/en.asad`);
+      const ayahData = await fetchData(`https://api.alquran.cloud/v1/surah/${finnum}-/en.asad`);
       setEngAyahs(ayahData.data.ayahs)
     }
     const fetchSurah = async () => {
-      const quranData = await fetchData(`https://api.alquran.cloud/v1/surah/${number}-`);
+      const quranData = await fetchData(`https://api.alquran.cloud/v1/surah/${finnum}-`);
       setData(quranData.data)
       setAyahs(quranData.data.ayahs)
     }
+
     fetchAyah();
     fetchSurah();
-  }, [number]);
+  }, [finnum]);
   return (
     <Container>
       <Header>
@@ -130,7 +141,7 @@ const WholeSurah = () => {
       </Header>
       <SurahContainer>
         <h2>
-          <span>{number}</span>
+          <span>{finnum}</span>
             {data.name}
           </h2>
         <div className="nav">
@@ -155,7 +166,7 @@ const WholeSurah = () => {
             ayahs.map((item) => {
               return (
                 <Ayah key={item.number} >
-                  <span>{number}.{item.numberInSurah}</span>
+                  <span>{finnum}.{item.numberInSurah}</span>
                   <p>{item.text}</p>
                 </Ayah>
               )
@@ -182,13 +193,12 @@ const WholeSurah = () => {
           </Link>
         </div>
         <div>
-          <Link to={`/wholesurah/${numb}`}>
+          <Link to={`/wholesurah/${finnum}`}>
             <PrimaryBtn>
               next
             </PrimaryBtn>
           </Link>
         </div>
-
       </div>
 
     </Container>
