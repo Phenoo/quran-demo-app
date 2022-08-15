@@ -616,6 +616,11 @@ text-transform: capitalize;
 @media(max-width: 45em){
   font-size: 1.25rem;
 }
+
+@media(max-width: 31em){
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
 `
 
 export const MoreBtn = styled.button`

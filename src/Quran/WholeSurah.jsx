@@ -121,18 +121,18 @@ const WholeSurah = () => {
 
   useEffect(() => {
     const fetchAyah = async () => {
-      const ayahData = await fetchData(`https://api.alquran.cloud/v1/surah/${finnum}-/en.asad`);
+      const ayahData = await fetchData(`https://api.alquran.cloud/v1/surah/${number}-/en.asad`);
       setEngAyahs(ayahData.data.ayahs)
     }
     const fetchSurah = async () => {
-      const quranData = await fetchData(`https://api.alquran.cloud/v1/surah/${finnum}-`);
+      const quranData = await fetchData(`https://api.alquran.cloud/v1/surah/${number}-`);
       setData(quranData.data)
       setAyahs(quranData.data.ayahs)
     }
 
     fetchAyah();
     fetchSurah();
-  }, [finnum]);
+  }, [number]);
   return (
     <Container>
       <Header>
@@ -166,7 +166,7 @@ const WholeSurah = () => {
             ayahs.map((item) => {
               return (
                 <Ayah key={item.number} >
-                  <span>{finnum}.{item.numberInSurah}</span>
+                  <span>{num}.{item.numberInSurah}</span>
                   <p>{item.text}</p>
                 </Ayah>
               )
@@ -193,7 +193,7 @@ const WholeSurah = () => {
           </Link>
         </div>
         <div>
-          <Link to={`/wholesurah/${finnum}`}>
+          <Link to={`/wholesurah/${numb}`}>
             <PrimaryBtn>
               next
             </PrimaryBtn>
