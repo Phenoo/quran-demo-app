@@ -57,6 +57,9 @@ h6{
   margin-bottom: 0.5rem;
 }
 
+.more{
+  margin: 1rem 0;
+}
 
 `
 
@@ -116,7 +119,6 @@ const WholeSurah = () => {
     }
   }
 
-  const finnum = CheckNumber(numb);
 
 
   useEffect(() => {
@@ -141,9 +143,25 @@ const WholeSurah = () => {
       </Header>
       <SurahContainer>
         <h2>
-          <span>{finnum}</span>
+          <span>{num}</span>
             {data.name}
           </h2>
+          <div className="more">
+        <div>
+          <Link to='/surah'>
+            <MoreBtn>
+              Back
+            </MoreBtn>
+          </Link>
+        </div>
+        <div>
+          <Link to={`/wholesurah/${numb}`}>
+            <PrimaryBtn onClick={CheckNumber}>
+              next
+            </PrimaryBtn>
+          </Link>
+        </div>
+      </div>
         <div className="nav">
           <h6>
           '{data.englishName}'
@@ -184,22 +202,7 @@ const WholeSurah = () => {
           } 
         
       </AyahContainer>
-      <div className="more">
-        <div>
-          <Link to='/'>
-            <MoreBtn>
-              Back
-            </MoreBtn>
-          </Link>
-        </div>
-        <div>
-          <Link to={`/wholesurah/${numb}`}>
-            <PrimaryBtn>
-              next
-            </PrimaryBtn>
-          </Link>
-        </div>
-      </div>
+
 
     </Container>
   )

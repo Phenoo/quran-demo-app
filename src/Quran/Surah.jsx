@@ -52,7 +52,7 @@ const Surah = () => {
       {
         data.map((item, index) => {
           return (
-            <Link to={`/wholesurah/${index}`} key={index} className='card'>
+            <Link to={`/wholesurah/${item.number}`} key={index} className='card'>
               <div className="number">
                 <h5>
                   {item.number}
